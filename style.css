@@ -1,0 +1,276 @@
+@import url('https://fonts.goofleapis.com/css2?family=Roboto:@300;400;500;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto' , sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.container{
+    margin: 0 7rem;
+    height: 100%;
+    
+}
+a{
+    text-decoration: none;
+
+}
+ul{
+    list-style: none;
+}
+#home{
+    height: 100vh;
+    background: #0a5046;
+    color: #fff;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+
+}
+nav .logo {
+    width: 60px;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+}
+nav ul a{
+    color: #Fff;
+    padding: 20px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+nav ul a:hover{
+    color: #000;
+}
+
+#home .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+
+}
+#home .content img{
+    max-width: 320px;
+    animation: animation1 1s ease-out;
+    transition: 0.5s;
+    z-index: 1;
+}
+#home .content img:hover{
+    transform: scale(1.2);
+}
+
+
+#home .content .content-text h2{
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+#home .content .content-text h2 span {
+    font-size: 70px;
+
+}
+#home .content .content-text p {
+    font-weight: 300;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    width: 60%;
+}
+.btn {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 15px ;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    transition: .5s;
+}
+.btn:hover{
+    background-color: transparent;
+    border-radius: 15px;
+    color: #fff;
+    border: 1px solid #fff;
+    transform: 0.3s;
+}
+
+/*  */
+.social {
+    align-items: center;
+    margin-left: 3rem;
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    animation:animation2 1s ;
+    margin: auto;
+        justify-content: center;
+
+}
+.social a{
+    margin: 15px .5rem;
+    font-size: 25px;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0a5046;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+}
+.social a:hover {
+    color: #fff;
+}
+.social a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #0a5046;
+    z-index: -1;
+    transition: .5s;
+}
+.social a:hover::before {
+    width: 100%;
+
+}
+/*  */
+
+.spiro  {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    margin: auto;
+    animation: animation2 1s ease-out;
+    transition: 0.5s;
+}
+.spiro img:hover{
+    transform: scale(1.2);
+
+}
+.spiro #img1{
+    animation: animation3 1.5s ease-out;
+}
+.spiro #img2{
+    animation: animation4 2s ease-out;
+}
+.spiro #img3{
+    animation: animation5 2.5s ease-out;
+}
+
+@keyframes animation1 {
+    0%{
+        transform: translateX(500px);
+    }
+    100%{
+        transform: translateX(0)
+    }
+}
+@keyframes animation2 {
+    0%{
+        transform: translateY(200px);
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes animation3 {
+    0%{
+        transform: translateY(200px);
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes animation4 {
+    0%{
+        transform: translateY(200px);
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes animation5 {
+    0%{
+        transform: translateY(200px);
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@media (max-width:900px) {
+    .container{
+        margin: 0 1rem;
+    }
+    nav ul a {
+        padding: 10px;
+
+    }
+    #home .content {
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 0 0;
+    }
+    #home .content .content-text{
+        margin-bottom: 2rem;
+    }
+    #home .content .content-text p {
+        width: 100%;
+        font-size: 12px;
+
+    }
+    #home .content img {
+        width: 100px;
+        
+        
+    }
+    .social{
+        width: 100%;
+        position:initial;
+        display:flex;
+        margin-left: 5px;
+        margin-bottom: 15px;
+    }
+    .social i{
+        margin: 0px 15px;
+
+    }
+
+}
+@media (max-width: 600px){
+    nav{
+        display:block;
+    }
+    nav .logo {
+        display: block;
+        margin: 0 auto 15px;
+    }
+    nav ul {
+        justify-content: center;
+
+    }
+    nav ul a{
+        font-size: 10px;
+    }
+    .spiro{
+        margin-top: 0px;
+        width: 80px;
+    }
+}
